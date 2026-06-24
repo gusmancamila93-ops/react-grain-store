@@ -431,6 +431,271 @@
     padding: 24px;
   }
 
+  .gs-stat-card {
+    position: relative;
+    overflow: hidden;
+    padding-top: 36px;
+  }
+
+  .gs-stat-card::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--orange);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .gs-stat-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .gs-stat-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .gs-card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border-radius: 999px;
+    background: rgba(229, 148, 66, 0.12);
+    color: var(--orange);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    text-transform: uppercase;
+  }
+
+  .gs-stat-icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 14px;
+    background: rgba(229, 148, 66, 0.16);
+    color: var(--orange);
+  }
+
+  .gs-stat-card[data-tone="green"] .gs-stat-icon {
+    background: rgba(39, 174, 96, 0.18);
+    color: #27ae60;
+  }
+
+  .gs-stat-card[data-tone="red"] .gs-stat-icon {
+    background: rgba(231, 76, 60, 0.18);
+    color: #e74c3c;
+  }
+
+  .gs-stat-card[data-tone="purple"] .gs-stat-icon {
+    background: rgba(139, 92, 246, 0.18);
+    color: #8b5cf6;
+  }
+
+  .gs-stat-card[data-tone="blue"] .gs-stat-icon {
+    background: rgba(52, 152, 219, 0.15);
+    color: #3498db;
+  }
+
+  .gs-dashboard {
+    display: grid;
+    gap: 28px;
+  }
+
+  .gs-welcome-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--lilac) 0%, #8b5cf6 60%, var(--orange) 100%);
+    box-shadow: 0 12px 32px rgba(177, 156, 217, 0.35);
+    color: #ffffff;
+    padding: 30px 36px;
+  }
+
+  .gs-welcome-banner::before,
+  .gs-welcome-banner::after {
+    position: absolute;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    content: "";
+  }
+
+  .gs-welcome-banner::before {
+    top: -40px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .gs-welcome-banner::after {
+    right: 120px;
+    bottom: -60px;
+    width: 160px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .gs-welcome-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .gs-welcome-text h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .gs-welcome-text p {
+    max-width: 520px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .gs-welcome-icon {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    opacity: 0.88;
+  }
+
+  .gs-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+  }
+
+  .gs-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 0.9fr);
+    gap: 20px;
+  }
+
+  .gs-dashboard-chart {
+    display: grid;
+    min-height: 260px;
+    grid-template-columns: repeat(12, minmax(26px, 1fr));
+    align-items: end;
+    gap: 12px;
+  }
+
+  .gs-chart-month {
+    display: grid;
+    min-width: 0;
+    grid-template-rows: 1fr auto;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .gs-chart-bars {
+    display: flex;
+    height: 220px;
+    align-items: end;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .gs-chart-bar {
+    width: min(24px, 100%);
+    min-height: 12px;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(180deg, var(--orange), #c66f21);
+    box-shadow: 0 8px 16px rgba(229, 148, 66, 0.22);
+  }
+
+  .gs-chart-bar.secondary {
+    background: linear-gradient(180deg, var(--lilac), #7c5bbd);
+    box-shadow: 0 8px 16px rgba(177, 156, 217, 0.22);
+  }
+
+  .gs-chart-label {
+    color: var(--muted-foreground);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .gs-chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--muted-foreground);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .gs-chart-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .gs-chart-legend i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--orange);
+  }
+
+  .gs-chart-legend i.secondary {
+    background: var(--lilac);
+  }
+
+  .gs-indicator-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .gs-indicator {
+    border-radius: 14px;
+    background: var(--muted);
+    padding: 14px;
+  }
+
+  .gs-indicator div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .gs-indicator span {
+    color: var(--muted-foreground);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .gs-indicator strong {
+    font-family: var(--font-heading);
+    color: var(--orange);
+    font-size: 26px;
+  }
+
+  .gs-indicator p {
+    margin-top: 4px;
+    color: var(--muted-foreground);
+    font-size: 13px;
+  }
+
   .gs-btn {
     display: inline-flex;
     align-items: center;
@@ -678,6 +943,16 @@
     .gs-auth-brand {
       min-height: auto;
     }
+
+    .gs-dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gs-dashboard-chart {
+      overflow-x: auto;
+      grid-template-columns: repeat(12, minmax(36px, 1fr));
+      padding-bottom: 4px;
+    }
   }
 
   @media (min-width: 901px) {
@@ -699,6 +974,16 @@
     }
 
     .gs-theme-toggle span {
+      display: none;
+    }
+
+    .gs-welcome-banner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px 20px;
+    }
+
+    .gs-welcome-icon {
       display: none;
     }
   }
