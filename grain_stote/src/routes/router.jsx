@@ -9,6 +9,7 @@ import SalesPage from "@/pages/sales/SalesPage";
 import NewSalePage from "@/pages/sales/NewSalePage";
 import CustomersPage from "@/pages/customers/CustomersPage";
 import ProductsPage from "@/pages/products/ProductsPage";
+import ExpensesPage from "@/pages/expenses/ExpensesPage";
 import ReportsPage from "@/pages/reports/ReportsPage";
 import SettingsPage from "@/pages/settings/SettingsPage";
 
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
       { path: "ventas/nueva", element: <NewSalePage /> },
       { path: "clientes", element: <CustomersPage /> },
       { path: "productos", element: <ProductsPage /> },
+      { path: "egresos", element: <ExpensesPage /> },
       { path: "reportes", element: <ReportsPage /> },
       { path: "configuracion", element: <SettingsPage /> },
     ],
@@ -65,6 +67,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Navigate to="/contador/dashboard" replace /> },
       { path: "dashboard", element: <DashboardPage /> },
       { path: "clientes", element: <CustomersPage /> },
+      { path: "egresos", element: <ExpensesPage /> },
       { path: "reportes", element: <ReportsPage /> },
       { path: "configuracion", element: <SettingsPage /> },
     ],

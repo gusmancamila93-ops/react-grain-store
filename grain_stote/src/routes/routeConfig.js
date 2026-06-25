@@ -36,6 +36,7 @@ export const ROLE_ROUTES = {
     { path: "/admin/ventas", label: "Ventas", icon: "sales", group: "Principal" },
     { path: "/admin/clientes", label: "Clientes", icon: "customers", group: "Gestión" },
     { path: "/admin/productos", label: "Productos", icon: "products", group: "Gestión" },
+    { path: "/admin/egresos", label: "Egresos", icon: "expenses", group: "Gestión" },
     { path: "/admin/reportes", label: "Reportes", icon: "reports", group: "Gestión" },
     { path: "/admin/configuracion", label: "Configuración", icon: "settings", group: "Gestión" },
   ],
@@ -48,6 +49,7 @@ export const ROLE_ROUTES = {
   contador: [
     { path: "/contador/dashboard", label: "Dashboard", icon: "dashboard", group: "Principal" },
     { path: "/contador/clientes", label: "Clientes", icon: "customers", group: "Gestión" },
+    { path: "/contador/egresos", label: "Egresos", icon: "expenses", group: "Gestión" },
     { path: "/contador/reportes", label: "Reportes", icon: "reports", group: "Gestión" },
     { path: "/contador/configuracion", label: "Configuración", icon: "settings", group: "Gestión" },
   ],
