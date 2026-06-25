@@ -765,6 +765,14 @@
     margin-inline: auto;
   }
 
+  .gs-customers-page {
+    display: grid;
+    gap: 28px;
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+  }
+
   .gs-form-actions {
     display: flex;
     justify-content: flex-start;
@@ -783,15 +791,31 @@
     max-width: 960px;
   }
 
-  .gs-product-create-card > header {
+  .gs-customer-create-card {
+    max-width: 960px;
+  }
+
+  .gs-product-create-card > header,
+  .gs-customer-create-card > header {
     padding: 22px 28px 18px;
   }
 
-  .gs-product-create-card > div {
+  .gs-product-create-card > div,
+  .gs-customer-create-card > div {
     padding: 22px 28px 26px;
   }
 
+  .gs-customer-form-shell {
+    max-width: 860px;
+  }
+
   .gs-product-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 16px 18px;
+  }
+
+  .gs-customer-form {
     display: grid;
     grid-template-columns: repeat(2, minmax(240px, 1fr));
     gap: 16px 18px;
@@ -891,6 +915,53 @@
   }
 
   .gs-product-status.agotado::before {
+    background: #e74c3c;
+  }
+
+  .gs-customer-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .gs-customer-status::before {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    content: "";
+  }
+
+  .gs-customer-status.activo {
+    background: rgba(39, 174, 96, 0.12);
+    color: #27ae60;
+  }
+
+  .gs-customer-status.activo::before {
+    background: #27ae60;
+  }
+
+  .gs-customer-status.pendiente {
+    background: rgba(241, 196, 15, 0.15);
+    color: #b88a00;
+  }
+
+  .gs-customer-status.pendiente::before {
+    background: #d4a017;
+  }
+
+  .gs-customer-status.inactivo {
+    background: rgba(231, 76, 60, 0.12);
+    color: #e74c3c;
+  }
+
+  .gs-customer-status.inactivo::before {
     background: #e74c3c;
   }
 
@@ -1193,6 +1264,10 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .gs-customer-form {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .gs-dashboard-chart {
       overflow-x: auto;
       grid-template-columns: repeat(12, minmax(36px, 1fr));
@@ -1233,6 +1308,10 @@
     }
 
     .gs-product-form {
+      grid-template-columns: 1fr;
+    }
+
+    .gs-customer-form {
       grid-template-columns: 1fr;
     }
 
