@@ -34,7 +34,7 @@ function DashboardBars({ data, dual = false }) {
   const maxValue = Math.max(...data.flatMap((item) => [item.value, item.secondary ?? 0]));
 
   return (
-    <div className="gs-dashboard-chart" aria-label="Grafica de actividad mensual">
+    <div className="gs-dashboard-chart" aria-label="Gráfica de actividad mensual">
       {data.map((item) => (
         <div className="gs-chart-month" key={item.label}>
           <div className="gs-chart-bars">
@@ -126,24 +126,26 @@ function DashboardPage() {
         </section>
       </div>
 
-      <TableCard
-        columns={[
-          { key: "date", label: "Fecha" },
-          { key: "customer", label: "Cliente" },
-          { key: "amount", label: "Monto" },
-        ]}
-        renderRow={(row) => (
-          <>
-            <td className="px-6 py-4 font-semibold text-foreground">{formatDate(row.date)}</td>
-            <td className="px-6 py-4 text-muted-foreground">{row.customer}</td>
-            <td className="px-6 py-4 font-heading text-lg font-bold text-primary">
-              {formatCurrency(row.amount)}
-            </td>
-          </>
-        )}
-        rows={dashboardMovements}
-        title={dashboard.tableTitle}
-      />
+      <div className="gs-dashboard-table">
+        <TableCard
+          columns={[
+            { key: "date", label: "Fecha" },
+            { key: "customer", label: "Cliente" },
+            { key: "amount", label: "Monto" },
+          ]}
+          renderRow={(row) => (
+            <>
+              <td className="font-semibold text-foreground">{formatDate(row.date)}</td>
+              <td className="text-muted-foreground">{row.customer}</td>
+              <td className="font-heading text-lg font-bold text-primary">
+                {formatCurrency(row.amount)}
+              </td>
+            </>
+          )}
+          rows={dashboardMovements}
+          title={dashboard.tableTitle}
+        />
+      </div>
     </section>
   );
 }

@@ -45,7 +45,7 @@ function SettingsPage() {
             Panel de {roleLabel}
           </p>
           <h1 className="gs-page-title">
-            <Settings className="inline-block align-[-0.08em]" size={34} /> Configuracion
+            <Settings className="inline-block align-[-0.08em]" size={34} /> Configuración
           </h1>
         </div>
       </div>
@@ -55,7 +55,7 @@ function SettingsPage() {
           {currentTab.title}
         </h2>
         <p className="mt-2 text-muted-foreground">
-          Seccion preparada para implementar la configuracion correspondiente.
+          Sección preparada para implementar la configuración correspondiente.
         </p>
       </div>
     </section>

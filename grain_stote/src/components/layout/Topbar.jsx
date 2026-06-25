@@ -11,7 +11,7 @@ function Topbar({ role, onToggleSidebar }) {
     <header className="gs-topbar" data-layout="topbar">
       <div className="gs-topbar-left">
         <button
-          aria-label="Abrir navegacion"
+          aria-label="Abrir navegación"
           className="gs-icon-btn lg:hidden"
           onClick={onToggleSidebar}
           type="button"

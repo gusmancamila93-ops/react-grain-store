@@ -1,4 +1,4 @@
-function PagePlaceholder({ title, description = "Estructura base pendiente de implementacion." }) {
+function PagePlaceholder({ title, description = "Estructura base pendiente de implementación." }) {
   return (
     <section className="gs-card gs-card-pad">
       <h2 className="font-heading text-2xl font-semibold uppercase text-foreground">{title}</h2>

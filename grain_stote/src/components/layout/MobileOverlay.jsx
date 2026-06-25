@@ -3,7 +3,7 @@ function MobileOverlay({ open, onClose }) {
 
   return (
     <button
-      aria-label="Cerrar navegacion"
+      aria-label="Cerrar navegación"
       className="gs-mobile-overlay"
       onClick={onClose}
       type="button"

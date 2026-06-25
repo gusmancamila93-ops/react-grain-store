@@ -26,7 +26,7 @@ export const ROLE_PROFILE = {
 };
 
 export const PUBLIC_ROUTES = [
-  { path: "/login", label: "Iniciar sesion" },
+  { path: "/login", label: "Iniciar sesión" },
   { path: "/registro", label: "Registro" },
 ];
 
@@ -34,22 +34,22 @@ export const ROLE_ROUTES = {
   admin: [
     { path: "/admin/dashboard", label: "Dashboard", icon: "dashboard", group: "Principal" },
     { path: "/admin/ventas", label: "Ventas", icon: "sales", group: "Principal" },
-    { path: "/admin/clientes", label: "Clientes", icon: "customers", group: "Gestion" },
-    { path: "/admin/productos", label: "Productos", icon: "products", group: "Gestion" },
-    { path: "/admin/reportes", label: "Reportes", icon: "reports", group: "Gestion" },
-    { path: "/admin/configuracion", label: "Configuracion", icon: "settings", group: "Gestion" },
+    { path: "/admin/clientes", label: "Clientes", icon: "customers", group: "Gestión" },
+    { path: "/admin/productos", label: "Productos", icon: "products", group: "Gestión" },
+    { path: "/admin/reportes", label: "Reportes", icon: "reports", group: "Gestión" },
+    { path: "/admin/configuracion", label: "Configuración", icon: "settings", group: "Gestión" },
   ],
   vendedor: [
     { path: "/vendedor/dashboard", label: "Dashboard", icon: "dashboard", group: "Principal" },
     { path: "/vendedor/ventas", label: "Ventas", icon: "sales", group: "Principal" },
-    { path: "/vendedor/clientes", label: "Clientes", icon: "customers", group: "Gestion" },
-    { path: "/vendedor/productos", label: "Productos", icon: "products", group: "Gestion" },
+    { path: "/vendedor/clientes", label: "Clientes", icon: "customers", group: "Gestión" },
+    { path: "/vendedor/productos", label: "Productos", icon: "products", group: "Gestión" },
   ],
   contador: [
     { path: "/contador/dashboard", label: "Dashboard", icon: "dashboard", group: "Principal" },
-    { path: "/contador/clientes", label: "Clientes", icon: "customers", group: "Gestion" },
-    { path: "/contador/reportes", label: "Reportes", icon: "reports", group: "Gestion" },
-    { path: "/contador/configuracion", label: "Configuracion", icon: "settings", group: "Gestion" },
+    { path: "/contador/clientes", label: "Clientes", icon: "customers", group: "Gestión" },
+    { path: "/contador/reportes", label: "Reportes", icon: "reports", group: "Gestión" },
+    { path: "/contador/configuracion", label: "Configuración", icon: "settings", group: "Gestión" },
   ],
 };
 

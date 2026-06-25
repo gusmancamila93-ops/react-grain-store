@@ -70,7 +70,7 @@ function LoginPage() {
             <ShieldCheck size={28} />
           </div>
           <h2 className="font-heading text-3xl font-bold uppercase text-foreground">
-            Iniciar sesion
+            Iniciar sesión
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             Usa uno de los perfiles simulados para entrar al panel correspondiente.
@@ -106,13 +106,13 @@ function LoginPage() {
 
         <label className="gs-field">
           <span>
-            <LockKeyhole size={16} /> Contrasena
+            <LockKeyhole size={16} /> Contraseña
           </span>
           <input
             className="gs-input"
             name="password"
             onChange={updateField}
-            placeholder="Contrasena"
+            placeholder="Contraseña"
             type="password"
             value={form.password}
           />

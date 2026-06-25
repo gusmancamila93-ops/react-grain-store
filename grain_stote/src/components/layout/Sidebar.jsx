@@ -21,7 +21,7 @@ const ICONS = {
   settings: Settings,
 };
 
-const GROUP_ORDER = ["Principal", "Gestion"];
+const GROUP_ORDER = ["Principal", "Gestión"];
 
 function groupRoutes(routes) {
   return GROUP_ORDER.map((group) => ({
@@ -46,7 +46,7 @@ function Sidebar({ role, open = false, onNavigate, onRequestClose }) {
     <aside className="gs-sidebar" data-layout="sidebar" data-open={open ? "true" : "false"}>
       <div className="gs-sidebar-logo">
         <button
-          aria-label="Cerrar navegacion"
+          aria-label="Cerrar navegación"
           className="gs-sidebar-close"
           onClick={onRequestClose}
           type="button"
@@ -71,7 +71,12 @@ function Sidebar({ role, open = false, onNavigate, onRequestClose }) {
                   to={route.path}
                 >
                   <Icon size={18} />
-                  <span>{route.label}</span>
+                  <span
+                    className={route.label === "Dashboard" ? "notranslate" : undefined}
+                    translate={route.label === "Dashboard" ? "no" : undefined}
+                  >
+                    {route.label}
+                  </span>
                 </NavLink>
               );
             })}

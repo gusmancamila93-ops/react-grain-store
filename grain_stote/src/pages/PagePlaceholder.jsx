@@ -18,7 +18,7 @@ function PagePlaceholder({ title }) {
       </div>
       <div className="gs-card gs-card-pad">
         <p className="text-muted-foreground">
-          Pagina reservada para la implementacion del modulo.
+          Página reservada para la implementación del módulo.
         </p>
       </div>
     </section>

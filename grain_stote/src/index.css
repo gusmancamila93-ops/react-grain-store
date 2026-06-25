@@ -401,6 +401,11 @@
     padding: 28px;
   }
 
+  .gs-content > * {
+    max-width: 1180px;
+    margin-inline: auto;
+  }
+
   .gs-page-header {
     display: flex;
     align-items: center;
@@ -429,6 +434,53 @@
 
   .gs-card-pad {
     padding: 24px;
+  }
+
+  .gs-table-card {
+    overflow: hidden;
+    padding: 24px;
+  }
+
+  .gs-table-card-header {
+    margin-bottom: 20px;
+  }
+
+  .gs-table-scroll {
+    overflow-x: auto;
+  }
+
+  .gs-data-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .gs-data-table thead {
+    background: var(--muted);
+    color: var(--muted-foreground);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .gs-data-table th {
+    padding: 12px 16px;
+    font-weight: 800;
+  }
+
+  .gs-data-table td {
+    border-top: 1px solid var(--border);
+    padding: 12px 16px;
+  }
+
+  .gs-data-table tbody tr {
+    transition: background var(--transition);
+  }
+
+  .gs-data-table tbody tr:hover {
+    background: rgba(229, 148, 66, 0.05);
   }
 
   .gs-stat-card {
@@ -506,6 +558,9 @@
   .gs-dashboard {
     display: grid;
     gap: 28px;
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
   }
 
   .gs-welcome-banner {
@@ -585,6 +640,12 @@
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(260px, 0.9fr);
     gap: 20px;
+  }
+
+  .gs-dashboard-table {
+    width: min(100%, 920px);
+    max-width: 920px;
+    margin-right: auto;
   }
 
   .gs-dashboard-chart {
@@ -694,6 +755,181 @@
     margin-top: 4px;
     color: var(--muted-foreground);
     font-size: 13px;
+  }
+
+  .gs-products-page {
+    display: grid;
+    gap: 28px;
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+  }
+
+  .gs-form-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .gs-form-actions .gs-btn {
+    min-width: 210px;
+  }
+
+  .gs-product-form-shell {
+    max-width: 860px;
+  }
+
+  .gs-product-create-card {
+    max-width: 960px;
+  }
+
+  .gs-product-create-card > header {
+    padding: 22px 28px 18px;
+  }
+
+  .gs-product-create-card > div {
+    padding: 22px 28px 26px;
+  }
+
+  .gs-product-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 16px 18px;
+  }
+
+  .gs-products-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  .gs-products-search {
+    position: relative;
+    flex: 1 1 260px;
+  }
+
+  .gs-products-search > svg {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    z-index: 1;
+    color: var(--orange);
+    transform: translateY(-50%);
+  }
+
+  .gs-products-search .gs-input {
+    border-color: var(--orange);
+    border-radius: 999px;
+    background: var(--mint);
+    padding-left: 42px;
+    font-weight: 700;
+  }
+
+  .gs-filter-control {
+    position: relative;
+    flex: 0 1 220px;
+  }
+
+  .gs-filter-control > svg {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    z-index: 1;
+    color: var(--orange);
+    transform: translateY(-50%);
+  }
+
+  .gs-filter-control .gs-input {
+    border-radius: 999px;
+    padding-left: 42px;
+    font-weight: 700;
+  }
+
+  .gs-product-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .gs-product-status::before {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    content: "";
+  }
+
+  .gs-product-status.normal {
+    background: rgba(39, 174, 96, 0.12);
+    color: #27ae60;
+  }
+
+  .gs-product-status.normal::before {
+    background: #27ae60;
+  }
+
+  .gs-product-status.bajo-stock {
+    background: rgba(241, 196, 15, 0.15);
+    color: #b88a00;
+  }
+
+  .gs-product-status.bajo-stock::before {
+    background: #d4a017;
+  }
+
+  .gs-product-status.agotado {
+    background: rgba(231, 76, 60, 0.12);
+    color: #e74c3c;
+  }
+
+  .gs-product-status.agotado::before {
+    background: #e74c3c;
+  }
+
+  .gs-row-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .gs-action-btn {
+    display: inline-grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .gs-action-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .gs-action-btn.edit {
+    background: rgba(177, 156, 217, 0.2);
+    color: #8b5cf6;
+  }
+
+  .gs-action-btn.edit:hover {
+    background: rgba(177, 156, 217, 0.4);
+  }
+
+  .gs-action-btn.delete {
+    background: rgba(231, 76, 60, 0.12);
+    color: #e74c3c;
+  }
+
+  .gs-action-btn.delete:hover {
+    background: rgba(231, 76, 60, 0.25);
   }
 
   .gs-btn {
@@ -948,6 +1184,15 @@
       grid-template-columns: 1fr;
     }
 
+    .gs-dashboard-table {
+      width: 100%;
+      max-width: none;
+    }
+
+    .gs-product-form {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .gs-dashboard-chart {
       overflow-x: auto;
       grid-template-columns: repeat(12, minmax(36px, 1fr));
@@ -985,6 +1230,22 @@
 
     .gs-welcome-icon {
       display: none;
+    }
+
+    .gs-product-form {
+      grid-template-columns: 1fr;
+    }
+
+    .gs-filter-control {
+      flex-basis: 100%;
+    }
+
+    .gs-form-actions {
+      justify-content: stretch;
+    }
+
+    .gs-form-actions .gs-btn {
+      width: 100%;
     }
   }
 }
